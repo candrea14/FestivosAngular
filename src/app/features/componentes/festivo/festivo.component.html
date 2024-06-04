@@ -1,0 +1,17 @@
+<mat-toolbar>
+  <div class="barraTituloCRUD">Selecciones del Mundo</div>
+</mat-toolbar>
+
+<div>
+  <mat-form-field>
+    <mat-label>Año</mat-label>
+    <input matInput [(ngModel)]="textoBusqueda" />
+  </mat-form-field>
+  <button mat-stroked-button color="primary" (click)="obtener()">Obtener Festivos por año</button>
+</div>
+<div>
+  <button mat-raised-button color="primary" (click)="agregar()">Agregar</button>
+  <button mat-raised-button color="accent" (click)="modificar()">
+    Modificar
+  </button>
+  

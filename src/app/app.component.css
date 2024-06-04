@@ -1,0 +1,17 @@
+.centrar {
+  text-align: center; /* Centrar horizontalmente */
+  display: flex; /* Utilizamos flexbox para centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente con flexbox */
+  width: 100%; /* Ancho completo */
+}
+
+#mat {
+  background-color: #ffd0d0;
+}
+
+html {
+  background-color: #f9f9e0;
+}
+div {
+  color: #3aa6b9;
+}
