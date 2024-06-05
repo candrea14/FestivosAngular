@@ -4,5 +4,5 @@ export interface Festivo {
   ano: number;
   mes: number;
   dia: number;
-  fecha: string;
+  fecha: Date;
 }
