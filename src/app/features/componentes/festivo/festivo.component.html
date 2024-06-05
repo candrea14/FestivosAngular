@@ -1,5 +1,5 @@
 <mat-toolbar>
-  <div class="barraTituloCRUD">Selecciones del Mundo</div>
+  <div class="barraTituloCRUD">Obtener festivos de un año</div>
 </mat-toolbar>
 
 <div>
@@ -7,11 +7,19 @@
     <mat-label>Año</mat-label>
     <input matInput [(ngModel)]="textoBusqueda" />
   </mat-form-field>
-  <button mat-stroked-button color="primary" (click)="obtener()">Obtener Festivos por año</button>
+  <button mat-stroked-button color="primary" (click)="obtener()">
+    Obtener Festivos por año
+  </button>
 </div>
 <div>
-  <button mat-raised-button color="primary" (click)="agregar()">Agregar</button>
-  <button mat-raised-button color="accent" (click)="modificar()">
-    Modificar
-  </button>
-  
+  <ngx-datatable
+    [rows]="festivos"
+    [columns]="columnas"
+    [rowHeight]="'auto'"
+    [columnMode]="modoColumna.force"
+    [limit]="10"
+    [headerHeight]="50"
+    [footerHeight]="50"
+  >
+  </ngx-datatable>
+</div>

@@ -1,1 +1,21 @@
-<p>inicio works!</p>
+<mat-toolbar>
+  <div class="barraTituloCRUD">Verificar Festivos</div>
+</mat-toolbar>
+
+<div>
+  <mat-form-field>
+    <mat-label>Año</mat-label>
+    <input matInput [(ngModel)]="ano" />
+  </mat-form-field>
+  <mat-form-field>
+  <mat-label>Mes</mat-label>
+    <input matInput [(ngModel)]="mes" />
+  </mat-form-field>
+  <mat-form-field>
+  <mat-label>Dia</mat-label>
+    <input matInput [(ngModel)]="dia" />
+  </mat-form-field>
+  <button mat-stroked-button color="primary" (click)="verificar()">
+    Verificar si la fecha es festivo
+  </button>
+</div>

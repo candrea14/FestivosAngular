@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { FestivoService } from './festivo.service';
+import { FestivoService } from './FestivoService';
 
 describe('FestivoService', () => {
   let service: FestivoService;
