@@ -23,6 +23,10 @@ export class FestivoService {
     );
   }
 
+  public listar(): Observable<Festivo[]> {
+    return this.http.get<Festivo[]>(`${this.url}listar`);
+  }
+
   public obtener(ano: number): Observable<Festivo[]> {
     return this.http.get<Festivo[]>(`${this.url}obtener/${ano}`);
   }

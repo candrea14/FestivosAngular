@@ -38,20 +38,30 @@ export class FestivoComponent {
     private servicio: FestivoService,
     private servicioDialogo: MatDialog
   ) {
-
+   this.listar() 
   }
 
+ listar() {
+    this.servicio.listar().subscribe({
+      next: (response) => {
+        this.festivos = response;
+      },
+      error: (error) => {
+        window.alert(error);
+      },
+    });
+  }
 
   obtener() {
     if (this.textoBusqueda > 0) {
       this.servicio.obtener(this.textoBusqueda).subscribe({
         next: (response) => {
-          this.festivos = response;
+          this.festivos = response
         }, 
         error: (error) => {
           window.alert(error.message);
         },
       });
-    }
+    } 
   }
 }
